@@ -1,5 +1,5 @@
 {
-  "name": "lb-cmp",
+  "name": "windfarm-css",
   "version": "1.0.0",
   "description": "A system for implementing design systems in component libraries",
   "main": "lib/index.js",
