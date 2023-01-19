@@ -1,0 +1,85 @@
+import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+
+import Card from '../components/Card'
+import Text from '../components/Text'
+import Layout from '../components/Layout'
+
+<Meta title='Text' />
+
+# Text
+
+For displaying words.
+
+## color
+
+```
+fc_[ps][1-9] : [ps] primary/secondary, [1-9] darkness
+```
+
+<Preview>
+  <Story name='primary'>
+    <Text fc_p1>The quick brown fox jumps over the lazy dog</Text>
+    <Text fc_p2>The quick brown fox jumps over the lazy dog</Text>
+    <Text fc_p3>The quick brown fox jumps over the lazy dog</Text>
+    <Text fc_p4>The quick brown fox jumps over the lazy dog</Text>
+    <Text fc_p5>The quick brown fox jumps over the lazy dog</Text>
+    <Text fc_p6>The quick brown fox jumps over the lazy dog</Text>
+    <Text fc_p7>The quick brown fox jumps over the lazy dog</Text>
+    <Text fc_p8>The quick brown fox jumps over the lazy dog</Text>
+    <Text fc_p9>The quick brown fox jumps over the lazy dog</Text>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name='secondary'>
+    <Text fc_s1>The quick brown fox jumps over the lazy dog</Text>
+    <Text fc_s2>The quick brown fox jumps over the lazy dog</Text>
+    <Text fc_s3>The quick brown fox jumps over the lazy dog</Text>
+    <Text fc_s4>The quick brown fox jumps over the lazy dog</Text>
+    <Text fc_s5>The quick brown fox jumps over the lazy dog</Text>
+    <Text fc_s6>The quick brown fox jumps over the lazy dog</Text>
+    <Text fc_s7>The quick brown fox jumps over the lazy dog</Text>
+    <Text fc_s8>The quick brown fox jumps over the lazy dog</Text>
+    <Text fc_s9>The quick brown fox jumps over the lazy dog</Text>
+  </Story>
+</Preview>
+
+## size
+
+```
+s_(xs|sm|md|lg|xl) : x-small, small, medium, large, x-large
+```
+
+<Preview>
+  <Story name='size: xs'><Text s_xs>xsmall</Text></Story>
+  <Story name='size: sm'><Text s_sm>small</Text></Story>
+  <Story name='size: md'><Text s_md>medium</Text></Story>
+  <Story name='size: lg'><Text s_lg>large</Text></Story>
+  <Story name='size: xl'><Text s_xl>xlarge</Text></Story>
+</Preview>
+
+## text weight
+
+```
+w_(xs|sm|md|lg|xl) : x-small, small, medium, large, x-large
+```
+
+<Preview>
+  <Story name='weight: xs'><Text w_xs>The quick brown fox jumps over the lazy dog</Text></Story>
+  <Story name='weight: sm'><Text w_sm>The quick brown fox jumps over the lazy dog</Text></Story>
+  <Story name='weight: md'><Text w_md>The quick brown fox jumps over the lazy dog</Text></Story>
+  <Story name='weight: lg'><Text w_lg>The quick brown fox jumps over the lazy dog</Text></Story>
+  <Story name='weight: xl'><Text w_xl>The quick brown fox jumps over the lazy dog</Text></Story>
+</Preview>
+
+# Examples
+
+<Preview>
+  <Story name='examples'>
+    <Layout>
+      <Text fc_p4 s_lg w_md>The quick brown fox jumps over the lazy dog</Text>
+      <Text fc_p7 s_xl w_xs>The quick brown fox jumps over the lazy dog</Text>
+      <Text fc_s5 s_xl w_md>The quick brown fox jumps over the lazy dog</Text>
+    </Layout>
+  </Story>
+</Preview>

@@ -1,0 +1,218 @@
+import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+
+import Layout from '../components/Layout'
+import Button from '../components/Button'
+import Text from '../components/Text'
+import Card from '../components/Card'
+import Empty from '../components/Empty'
+
+import { generateText } from '../../example-text'
+
+<Meta title='Layout' component={Layout} />
+
+# Layout
+
+A thing to put things in places.
+
+By default, Layout acts as a generic `div` tag.
+
+<Preview>
+  <Story name='simple'>
+    <Layout>
+      <Text s_lg>Header</Text>
+      <Text>
+        { generateText({sentences: 2}) }
+      </Text>
+    </Layout>
+  </Story>
+</Preview>
+
+## row
+
+The `row` prop gives Layout `display: flex`, which by default arranges
+children as equal columns. It will also remove any `margin` of children.
+
+<Preview>
+  <Story name='row'>
+    <Layout row iflx_exp>
+      <Text>col 1</Text>
+      <Button c_p5>col 2</Button>
+    </Layout>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name='row with an empty column'>
+    <Layout row iflx_exp>
+      <Button c_s5>col 1</Button>
+      <Empty/>
+      <Button c_s5>col 3</Button>
+    </Layout>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name='row with five columns'>
+    <Layout row iflx_exp>
+      <Text>col 1</Text>
+      <Text>col 2</Text>
+      <Text>col 3</Text>
+      <Text>col 4</Text>
+      <Text>col 5</Text>
+    </Layout>
+  </Story>
+</Preview>
+
+## column
+
+To arrange children in a column instead, use `col`.
+
+<Preview>
+  <Story name='col'>
+    <Layout col>
+      <Text>row 1</Text>
+      <Text>row 2</Text>
+      <Text>row 3</Text>
+      <Text>row 4</Text>
+      <Text>row 5</Text>
+    </Layout>
+  </Story>
+</Preview>
+
+## Empty
+
+An empty element can be used to space rows or columns out.
+
+<Preview>
+  <Story name='empty'>
+    <Layout col>
+      <Text>row 1</Text>
+      <Empty/>
+      <Text>row 3</Text>
+      <Text>row 4</Text>
+      <Text>row 5</Text>
+    </Layout>
+  </Story>
+</Preview>
+
+## arrangement
+
+Layout can also be used to position children within them.
+
+<Preview>
+  <Story name='arrangement'>
+    <Layout col>
+      <Layout row bgn>
+        <Text>bgn</Text>
+      </Layout>
+      <Layout row mid>
+        <Text>mid</Text>
+      </Layout>
+      <Layout row end>
+        <Text>end</Text>
+      </Layout>
+    </Layout>
+  </Story>
+</Preview>
+
+
+## padding
+
+To apply padding to Layout, use the prefix `p_` followed by a two-letter size tag.
+The larger the size, the greater the padding.
+
+<Preview>
+  <Story name='padding:xs'>
+    <Layout p_xs>
+      <Text s_md>p_xs</Text>
+      <Text s_xs>
+        { generateText({sentences: 10}) }
+      </Text>
+    </Layout>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name='padding:sm'>
+    <Layout p_sm>
+      <Text s_md>p_sm</Text>
+      <Text s_xs>
+        { generateText({sentences: 10}) }
+      </Text>
+    </Layout>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name='padding:md'>
+    <Layout p_md>
+      <Text s_md>p_md</Text>
+      <Text s_xs>
+        { generateText({sentences: 10}) }
+      </Text>
+    </Layout>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name='padding:lg'>
+    <Layout p_lg>
+      <Text s_md>p_lg</Text>
+      <Text s_xs>
+        { generateText({sentences: 10}) }
+      </Text>
+    </Layout>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name='padding:xl'>
+    <Layout p_xl>
+      <Text s_md>p_xl</Text>
+      <Text s_xs>
+        { generateText({sentences: 10}) }
+      </Text>
+    </Layout>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name='central:md'>
+    <Layout cen_md>
+      <Card p_md>
+        <Text s_md>cen_md</Text>
+        <Text s_xs>
+          { generateText({sentences: 10}) }
+        </Text>
+      </Card>
+    </Layout>
+  </Story>
+</Preview>
+
+## Examples
+
+<Preview>
+  <Story name='example'>
+    <Layout p_lg col im_sm>
+      <Text s_xl>Example layout</Text>
+      <Text s_md>
+        Some text and some text and some text. Some text. Some more text and some
+        more text.
+        Some text and some text and some text. Some text. Some more text and some
+        more text.
+        Some text and some text and some text. Some text. Some more text and some
+        more text.
+      </Text>
+      <Text s_md fc_s5 >
+        Some text and some text and some text. Some text. Some more text and some
+        more text.
+      </Text>
+      <Layout row iflx_exp>
+        <Text s_sm fc_p5 >Click on the button to the right because why not?</Text>
+        <Layout row end>
+          <Button c_p5 s_lg>Click here</Button>
+        </Layout>
+      </Layout>
+    </Layout>
+  </Story>
+</Preview>

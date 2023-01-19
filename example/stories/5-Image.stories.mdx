@@ -1,0 +1,67 @@
+import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+
+import Card from '../components/Card'
+import Image from '../components/Image'
+import Layout from '../components/Layout'
+import EXAMPLE_SRC from './example.png'
+
+<Meta title='Image' />
+
+# Image
+
+For displaying images.
+
+<Preview>
+  <Story name='primary'>
+    <Image src={EXAMPLE_SRC} />
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name='size'>
+    <Image wi_xl src={EXAMPLE_SRC} />
+    <Image wi_lg src={EXAMPLE_SRC} />
+    <Image wi_md src={EXAMPLE_SRC} />
+    <Image wi_sm src={EXAMPLE_SRC} />
+    <Image wi_xs src={EXAMPLE_SRC} />
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name='border radius: xl'>
+    <Layout im_sm>
+      <Image wi_md br_xl src={EXAMPLE_SRC} />
+      <Image wi_sm br_xl src={EXAMPLE_SRC} />
+      <Image wi_xs br_xl src={EXAMPLE_SRC} />
+    </Layout>
+  </Story>
+  <Story name='border radius: md'>
+    <Layout im_sm>
+      <Image wi_md br_md src={EXAMPLE_SRC} />
+      <Image wi_sm br_md src={EXAMPLE_SRC} />
+      <Image wi_xs br_md src={EXAMPLE_SRC} />
+    </Layout>
+  </Story>
+  <Story name='border radius: sm'>
+    <Layout im_sm>
+      <Image wi_md br_sm src={EXAMPLE_SRC} />
+      <Image wi_sm br_sm src={EXAMPLE_SRC} />
+      <Image wi_xs br_sm src={EXAMPLE_SRC} />
+    </Layout>
+  </Story>
+  <Story name='border radius: xs'>
+    <Layout im_sm>
+      <Image wi_md br_xs src={EXAMPLE_SRC} />
+      <Image wi_sm br_xs src={EXAMPLE_SRC} />
+      <Image wi_xs br_xs src={EXAMPLE_SRC} />
+    </Layout>
+  </Story>
+</Preview>
+
+
+# Examples
+
+<Preview>
+  <Story name='examples'>
+  </Story>
+</Preview>

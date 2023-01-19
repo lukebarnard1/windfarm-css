@@ -1,0 +1,94 @@
+import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+
+import Card from '../components/Card'
+import Text from '../components/Text'
+import Button from '../components/Button'
+import Layout from '../components/Layout'
+
+import { generateText } from '../../example-text'
+
+<Meta
+  title='Examples/Navigation'
+  parameters={{
+    layout: 'fullscreen'
+  }}
+/>
+
+# Nav
+
+For primary navigation around the app.
+
+<Preview>
+  <Story name='large nav bar'>
+    <Layout>
+      <Card on c_p3 br_xs>
+        <Layout row cen_xl p_xl>
+          <Text s_xl flx_exp>brand.</Text>
+          <Layout row im_sm p_sm>
+            <Button s_lg c_p5> Home </Button>
+            <Button s_lg c_p4> Shop </Button>
+            <Button s_lg c_p4> Forum </Button>
+            <Button s_lg c_p2> Help </Button>
+            <Button s_lg c_p2> About </Button>
+          </Layout>
+        </Layout>
+      </Card>
+      <Layout p_lg cen_xl row>
+        <Card p_lg>
+          <Text s_xl>Welcome.</Text>
+          <Text s_md>
+            This is an example of a site that has a navigation bar.
+          </Text>
+          <Layout im_md iwi_lg wrp>
+            <Card p_md>
+              <Text s_lg>
+                An amazing card.
+              </Text>
+              <Text s_md>
+                Look at this card, oh wow.
+              </Text>
+              <Button c_0>Click here</Button>
+            </Card>
+            <Card p_md>
+              <Text s_lg>
+                An amazing card.
+              </Text>
+              <Text s_md>
+                Look at this card, oh wow.
+              </Text>
+              <Button c_0>Click here</Button>
+            </Card>
+            <Card p_md>
+              <Text s_lg>
+                An amazing card.
+              </Text>
+              <Text s_md>
+                Look at this card, oh wow.
+              </Text>
+              <Button c_0>Click here</Button>
+            </Card>
+            <Card p_md>
+              <Text s_lg>
+                An amazing card.
+              </Text>
+              <Text s_md>
+                Look at this card, oh wow.
+              </Text>
+              <Button c_0>Click here</Button>
+            </Card>
+            <Card p_md>
+              <Text s_lg>
+                An amazing card.
+              </Text>
+              <Text s_md>
+                Look at this card, oh wow.
+              </Text>
+              <Button c_0>Click here</Button>
+            </Card>
+          </Layout>
+        </Card>
+      </Layout>
+    </Layout>
+  </Story>
+</Preview>
+

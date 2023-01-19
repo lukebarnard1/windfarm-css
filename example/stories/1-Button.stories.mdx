@@ -1,0 +1,72 @@
+import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+
+import Button from '../components/Button'
+import Text from '../components/Text'
+import Layout from '../components/Layout'
+
+<Meta title='Button' component={Button} />
+
+# Button
+
+A thing to click on.
+
+## color
+
+```
+c_[ps][1-9] : [ps] primary/secondary, [1-9] darkness
+```
+
+<Preview>
+  <Story name='default'>
+    <Button>Click here</Button>
+  </Story>
+  <Story name='primary'>
+    <Button c_p4>Click here</Button>
+  </Story>
+  <Story name='secondary'>
+    <Button c_s4>Click here</Button>
+  </Story>
+  <Story name='dark'>
+    <Button c_s9>Click here</Button>
+  </Story>
+</Preview>
+
+## size
+
+```
+s_(xs|sm|md|lg|xl) : x-small, small, medium, large, x-large
+```
+
+<Preview>
+  <Story name='size: xs'>
+    <Button s_xs>Click</Button>
+  </Story>
+  <Story name='size: sm'>
+    <Button s_sm>Click</Button>
+  </Story>
+  <Story name='size: md'>
+    <Button s_md>Click</Button>
+  </Story>
+  <Story name='size: lg'>
+    <Button s_lg>Click</Button>
+  </Story>
+  <Story name='size: xl'>
+    <Button s_xl>Click</Button>
+  </Story>
+</Preview>
+
+# Examples
+
+<Preview>
+  <Story name='examples'>
+    <Layout im_lg>
+      <Text>This button is a <Button hol fc_p5>text button</Button></Text>
+      <Text>Click this button to <Button c_p3>continue</Button></Text>
+      <Text s_xs><Button c_s5 s_xs>Click here</Button> to continue</Text>
+      <Text s_xl><Button c_s5 s_xl>Click here</Button> to continue</Text>
+      <Text c_p6><Button c_p5>Click here</Button> to continue</Text>
+      <Text c_s6>Please <Button c_s5 s_lg>accept</Button> these terms to continue</Text>
+      <Text c_s9>Make sure to <Button c_s9>count your chickens</Button> before they hatch</Text>
+    </Layout>
+  </Story>
+</Preview>

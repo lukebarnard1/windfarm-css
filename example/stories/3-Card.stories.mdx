@@ -1,0 +1,155 @@
+import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+
+import Card from '../components/Card'
+import Text from '../components/Text'
+import Button from '../components/Button'
+import Layout from '../components/Layout'
+
+import { generateText } from '../../example-text'
+
+<Meta title='Card' />
+
+# Card
+
+For separating and grouping things.
+
+<Preview>
+  <Story name='default'>
+    <Card>
+      <Layout p_lg>
+        <Text s_lg>
+          Title
+        </Text>
+        <Text>
+          { generateText({sentences: 5}) }
+        </Text>
+      </Layout>
+    </Card>
+  </Story>
+</Preview>
+
+Card can be used to create a sense of hierachy.
+
+<Preview>
+  <Story name='hierachy'>
+    <Card p_lg>
+      <Layout row>
+        <Layout>
+          <Text s_xl>
+            Title
+          </Text>
+          <Card>
+            <Layout p_lg>
+              <Text>
+                { generateText({sentences: 3}) }
+              </Text>
+              <Card p_sm>
+                <Text al_cen>
+                  { generateText() }
+                </Text>
+              </Card>
+              <Text>
+                { generateText({sentences: 10}) }
+              </Text>
+            </Layout>
+          </Card>
+        </Layout>
+      </Layout>
+    </Card>
+  </Story>
+</Preview>
+
+
+Testing: Different card sizes
+
+<Preview>
+  <Story name='sizes'>
+    <Layout im_md>
+      <Card card_s_lg s_lg on c_p4 al_cen>
+        A large card
+      </Card>
+      <Card card_s_md s_md on c_p4 al_cen>
+        A medium card
+      </Card>
+      <Card card_s_sm s_sm on c_p4 al_cen>
+        A small card
+      </Card>
+    </Layout>
+  </Story>
+</Preview>
+
+Card can be given a color to highlight content.
+
+<Preview>
+  <Story name='color'>
+    <Card s_lg on c_p4 p_md al_cen>
+      { generateText() }
+    </Card>
+  </Story>
+</Preview>
+
+Cards can appear interactable with the `int` prop.
+
+<Preview>
+  <Story name='interactable'>
+    <Layout>
+      <Layout>
+        <Button href='/test' c_s5 m_xs>
+          Button
+        </Button>
+        <Button c_s2 m_xs>
+          Button
+        </Button>
+        <Button c_s2 m_xs>
+          Button
+        </Button>
+      </Layout>
+      <Card int on s_md c_s3 m_xs p_md al_jst>
+        <Text s_lg>Card</Text>
+        <Text s_md>
+          { generateText({sentences: 10}) }
+        </Text>
+      </Card>
+    </Layout>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name='interactable list'>
+    <Layout>
+      <Card int on s_md c_p4 m_xs p_md al_jst> { generateText() } </Card>
+      <Card int on s_md c_s4 m_xs p_md al_jst> { generateText() } </Card>
+      <Card int on s_md c_s3 m_xs p_md al_jst> { generateText() } </Card>
+      <Card int on s_md c_s2 m_xs p_md al_jst> { generateText() } </Card>
+      <Card int on s_md c_s1 m_xs p_md al_jst> { generateText() } </Card>
+      <Card int on s_md c_p9 m_xs p_md al_jst> { generateText() } </Card>
+    </Layout>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name='interactable list, with bigger text'>
+    <Layout>
+      <Card int on s_sm w_sm c_s2 m_xs p_md al_jst> { generateText({sentences: 10}) } </Card>
+      <Card int on s_sm w_sm c_s2 m_xs p_md al_jst> { generateText({sentences: 10}) } </Card>
+      <Card int on s_sm w_sm c_s2 m_xs p_md al_jst> { generateText({sentences: 10}) } </Card>
+      <Card int on s_sm w_sm c_s2 m_xs p_md al_jst> { generateText({sentences: 10}) } </Card>
+      <Card int on s_sm w_sm c_s2 m_xs p_md al_jst> { generateText({sentences: 10}) } </Card>
+    </Layout>
+  </Story>
+</Preview>
+
+Cards can have variable border radius.
+
+<Preview>
+  <Story name='with different border radii'>
+    <Layout im_md>
+      <Card on c_s5 br_xs p_sm>&lt;Card on c_s5 br_xs p_sm&gt;</Card>
+      <Card on c_s6 br_sm p_sm>&lt;Card on c_s6 br_sm p_sm&gt;</Card>
+      <Card on c_p6 br_md p_md>&lt;Card on c_p6 br_md p_md&gt;</Card>
+      <Card on c_p4 br_lg p_lg>&lt;Card on c_p4 br_lg p_lg&gt;</Card>
+      <Card on c_p2 br_xl p_lg>&lt;Card on c_p2 br_xl p_lg&gt;</Card>
+    </Layout>
+  </Story>
+</Preview>
+
